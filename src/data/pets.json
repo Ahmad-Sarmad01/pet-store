@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Golden Retriever",
+    "price": 500,
+    "image": "/pet.jpg"
+  },
+  {
+    "id": 2,
+    "name": "German Shepherd",
+    "price": 600,
+    "image": "/dog2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bulldog",
+    "price": 450,
+    "image": "/dog3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Poodle",
+    "price": 550,
+    "image": "/dog4.jpg"
+  }
+]
