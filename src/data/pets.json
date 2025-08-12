@@ -1,26 +1,66 @@
 [
   {
     "id": 1,
-    "name": "Golden Retriever",
-    "price": 500,
-    "image": "/pet.jpg"
+    "name": "MO231 - Pomeranian",
+    "gender": "Female",
+    "age": "2 months",
+    "price": 3900000,
+    "image": "/dog1.png"
   },
   {
     "id": 2,
-    "name": "German Shepherd",
-    "price": 600,
-    "image": "/dog2.jpg"
+    "name": "MO232 - Husky Brown",
+    "gender": "Male",
+    "age": "4 months",
+    "price": 4200000,
+    "image": "/dog2.png"
   },
   {
     "id": 3,
-    "name": "Bulldog",
-    "price": 450,
-    "image": "/dog3.jpg"
+    "name": "MO233 - Corgi Golden",
+    "gender": "Female",
+    "age": "3 months",
+    "price": 3500000,
+    "image": "/dog3.png"
   },
   {
     "id": 4,
-    "name": "Poodle",
-    "price": 550,
-    "image": "/dog4.jpg"
+    "name": "MO234 - Poodle Black",
+    "gender": "Male",
+    "age": "5 months",
+    "price": 5000000,
+    "image": "/dog4.png"
+  },
+  {
+    "id": 5,
+    "name": "MO235 - Shiba Inu Red",
+    "gender": "Female",
+    "age": "4 months",
+    "price": 4500000,
+    "image": "/dog5.png"
+  },
+  {
+    "id": 6,
+    "name": "MO236 - Bulldog White",
+    "gender": "Male",
+    "age": "6 months",
+    "price": 4700000,
+    "image": "/dog6.png"
+  },
+  {
+    "id": 7,
+    "name": "MO237 - Golden Retriever",
+    "gender": "Female",
+    "age": "3 months",
+    "price": 5300000,
+    "image": "/dog7.png"
+  },
+  {
+    "id": 8,
+    "name": "MO238 - Beagle Tricolor",
+    "gender": "Male",
+    "age": "5 months",
+    "price": 4100000,
+    "image": "/dog8.png"
   }
 ]

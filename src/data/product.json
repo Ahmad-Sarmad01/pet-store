@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Reflex Plus Adult Dag Food Salmon",
+    "product": "Dog Food",
+    "size": "1 kg",
+    "price": 3900000,
+    "image": "/product1.png"
+  },
+  {
+    "id": 2,
+    "name": "Reflex Plus Adult Cat Food Salmon",
+    "product": "Cat Food",
+    "size": "1 kg",
+    "price": 4200000,
+    "image": "/product2.png"
+  },
+  {
+    "id": 3,
+    "name": "Cat scratching ball toy kitten sisal rope ball",
+    "product": "Toy",
+    "size": "Medium",
+    "price": 3500000,
+    "image": "/product3.png"
+  },
+  {
+    "id": 4,
+    "name": "Cute Pet Cat Warm Nest",
+    "product": "Toy",
+    "size": "Large",
+    "price": 5000000,
+    "image": "/product4.png"
+  },
+  {
+    "id": 5,
+    "name": "NaturVet Dogs - Omega-Gold Plus Salmon Oil",
+    "product": "Dog Food",
+    "size": "1 kg",
+    "price": 4500000,
+    "image": "/product5.png"
+  },
+  {
+    "id": 6,
+    "name": "Costumes Fashion Pet Clother Cowboy Rider",
+    "product": "Costume",
+    "size": "Medium",
+    "price": 4700000,
+    "image": "/product6.png"
+  },
+  {
+    "id": 7,
+    "name": "Costumes Chicken Drumsti ck Headband",
+    "product": "Costume",
+    "size": "Small",
+    "price": 5300000,
+    "image": "/product7.png"
+  },
+  {
+    "id": 8,
+    "name": "Plush Pet Toy",
+    "product": "Toy",
+    "size": "Small",
+    "price": 4100000,
+    "image": "/product8.png"
+  }
+]
