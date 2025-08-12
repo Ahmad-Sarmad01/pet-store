@@ -33,19 +33,18 @@ export default function HomePage() {
               <div className="flex flex-row gap-4 justify-start">
                 <Link
                   href="/products"
-                  className="bg-[#003459] text-white px-5 py-3 rounded-4xl hover:bg-white hover:border-[#003459] hover:border hover:text-[#003459] transition"
+                  className="bg-transparent border border-[#003459] text-[#003459] px-5 py-3 rounded-4xl hover:bg-[#003459] hover:border-[#003459] hover:border hover:text-white transition"
                 >
                   View Intro <FontAwesomeIcon icon={faPlay} />
                 </Link>
                 <Link
                   href="/products"
-                  className="bg-[#003459] text-white px-5 py-3 rounded-4xl hover:bg-white hover:border-[#003459] hover:border hover:text-[#003459] transition"
+                  className="bg-[#003459] text-white px-5 py-3 rounded-4xl hover:bg-transparent hover:border-[#003459] hover:border hover:text-[#003459] transition"
                 >
                   Explore Now
                 </Link>
               </div>
             </div>
-
             <img
               src="/hero-rectangle-top-1.png"
               alt=""
@@ -55,7 +54,6 @@ export default function HomePage() {
                 md:top-[-163px] md:left-[-150px] md:w-[450px] 
               "
             />
-
             <img
               src="/hero-rectangle-top-2.png"
               alt=""
@@ -63,26 +61,22 @@ export default function HomePage() {
             />
           </div>
             
-
           <div className="flex-1 relative min-h-[400px] md:min-h-0">
             <img
               src="/hero-img.png"
               alt="Happy dog"
               className="absolute min-w-180 top-[20px] -left-[380px] z-10 md:absolute md:w-400 md:h-120 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mt-20 md:z-10"
             />
-
             <img
               src="/hero-rectangle-down-2.png"
               alt=""
               className="absolute min-w-150 -bottom-[65px] -left-[215px] md:absolute md:-top-[33px] md:-left-[13px] md:w-[500px] md:z-0"
             />
-
             <img
               src="/hero-rectangle-down-1.png"
               alt=""
               className="absolute min-w-170 -bottom-[65px] -left-[180px] md:absolute md:-top-[97px] md:-left-[1px] md:w-[600px] md:z-0"
             />
-
             <img
               src="/hero-rectangle-center-1.png"
               alt=""
@@ -110,11 +104,9 @@ export default function HomePage() {
               Take A Look At Some Of Our Pets
             </h2>
           </div>
-
-          {/* Desktop Button */}
           <Link
             href="/products"
-            className="hidden md:flex items-center gap-2 bg-[#003459] text-white px-4 py-2 rounded-4xl border hover:bg-white hover:text-[#003459] transition"
+            className="hidden md:flex items-center gap-2 bg-trasparent text-[#003459] px-4 py-2 rounded-4xl border border-[#003459] hover:bg-[#003459] hover:text-white transition"
           >
             View more
             <svg
@@ -128,7 +120,6 @@ export default function HomePage() {
             </svg>
           </Link>
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {pets.slice(0, 8).map((dog) => (
             <div
@@ -144,8 +135,6 @@ export default function HomePage() {
                 <h3 className="font-bold text-lg text-[#00171F]">
                   {dog.name}
                 </h3>
-
-                {/* Gender + Age */}
                 <p className="text-gray-500 text-sm mt-1">
                   <span className="hidden md:inline">
                     Gene: {dog.gender} &middot; Age: {dog.age}
@@ -156,8 +145,6 @@ export default function HomePage() {
                     {dog.age}
                   </span>
                 </p>
-
-                {/* Price in VND */}
                 <p className="text-[#00171F] font-bold mt-2">
                   {dog.price.toLocaleString("vi-VN")} VND
                 </p>
@@ -165,17 +152,15 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-
-        {/* Mobile Button */}
         <div className="mt-6 flex justify-center md:hidden">
           <Link
             href="/products"
-            className="flex items-center gap-2 w-full text-center justify-center bg-[#003459] text-white px-4 py-2 rounded-4xl border hover:bg-white hover:text-[#003459] transition"
+            className="flex items-center gap-2 w-full text-center justify-center bg-white text-[#003459] px-4 py-2 rounded-4xl border border-[#003459] hover:bg-[#003459] hover:text-white transition"
           >
             View more
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="relative h-4 w-4 top-[2px]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -188,16 +173,12 @@ export default function HomePage() {
 
       <section className="container relative md:right-5 bg-[#003459] px-6 md:mx-15 text-white py-16 overflow-hidden md:rounded-4xl">
         <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 ">
-
-          {/* ===== DESKTOP VIEW ===== */}
           <div className="hidden md:flex relative flex-1 justify-center md:justify-end mb-8 md:mb-0">
-            {/* Background Shape (Desktop Only) */}
             <img
               src="/hero2-below-left.png"
               alt=""
               className="absolute top-10 -left-26 min-w-[900px] z-0"
             />
-            {/* Main Image */}
             <img
               src="/hero-img2.png"
               alt=""
@@ -206,7 +187,6 @@ export default function HomePage() {
           </div>
 
           <div className="hidden md:flex relative flex-1 items-center justify-center md:pl-12">
-            {/* Background Shape (Desktop Only) */}
             <img
               src="/hero2-below-right.png"
               alt=""
@@ -222,18 +202,16 @@ export default function HomePage() {
               <p className="mb-6 text-[#003459] text-sm md:text-base max-w-md mx-auto md:mx-0">
                 Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
               </p>
-
-              {/* Buttons */}
               <div className="flex flex-col md:flex-row gap-4 justify-center w-full">
                 <Link
                   href="/products"
-                  className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border-2 hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
+                  className="bg-transparent text-[#003459] px-7 py-3 rounded-4xl hover:bg-[#003459] border hover:text-white border-[#003459] transition w-full md:w-auto text-center"
                 >
                   View Intro <FontAwesomeIcon icon={faPlay} />
                 </Link>
                 <Link
                   href="/products"
-                  className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border-2 hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
+                  className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
                 >
                   Explore Now
                 </Link>
@@ -241,16 +219,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* ===== MOBILE VIEW ===== */}
           <div className="flex flex-col items-center md:hidden w-full">
-            {/* Top Image */}
             <img
               src="/hero2-mobile-top.png"
               alt=""
               className="absolute -top-20 w-140 mb-6"
             />
-
-            {/* Text Content */}
             <h2 className="absolute text-4xl sm:text-3xl text-[#003459] font-bold mb-4 top-5 text-center z-10">
               One more friend
             </h2>
@@ -260,12 +234,10 @@ export default function HomePage() {
             <p className="mb-6 text-center px-4 text-sm text-[#003459] z-10">
               Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
             </p>
-
-            {/* Buttons */}
             <div className="flex flex-row gap-4 mb-8 w-full px-4 z-10">
               <Link
                 href="/products"
-                className="flex-1 bg-[#003459] hover:bg-[#003459] text-white hover:text-[#003459] border px-4 py-2 rounded-4xl  transition text-center"
+                className="flex-1 bg-transparent hover:bg-[#003459] text-[#003459] hover:text-white border px-4 py-2 rounded-4xl  transition text-center"
               >
                 View More <FontAwesomeIcon icon={faPlay} />
               </Link>
@@ -276,8 +248,6 @@ export default function HomePage() {
                 Explore Now
               </Link>
             </div>
-
-            {/* Bottom image + overlay */}
             <div className="relative">
               <img
                 src="/hero2-mobile-below.png"
@@ -302,11 +272,9 @@ export default function HomePage() {
               Our Products
             </h2>
           </div>
-
-          {/* Desktop Button */}
           <Link
             href="/products"
-            className="hidden md:flex items-center gap-2 bg-[#003459] text-white px-4 py-2 rounded-4xl border hover:bg-white hover:text-[#003459] transition"
+            className="hidden md:flex items-center gap-2 bg-transparent text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View more
             <svg
@@ -336,15 +304,11 @@ export default function HomePage() {
                 <h3 className="font-bold text-lg text-[#00171F]">
                   {product.name}
                 </h3>
-
-                {/* Gender + Age */}
                 <p className="text-gray-500 text-sm mt-1">
                   <span className="hidden md:inline">
                     Product: {product.product} &middot; Size: {product.size}
                   </span>
                 </p>
-
-                {/* Price in VND */}
                 <p className="text-[#00171F] font-bold mt-2">
                   {product.price.toLocaleString("vi-VN")} VND
                 </p>
@@ -356,55 +320,50 @@ export default function HomePage() {
       </section>
 
       <section className="hidden md:block container md:mx-15 px-6 py-12">
-      {/* Heading + Button */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <p className="text-sm">
-            Proud to be part of
-            <span className="absolute top-870 text-[20px] font-bold text-[#003459] font-[Helvetica] ml-[6px]">
-              Pet Sellers
-            </span>
-          </p>
-        </div>
-
-        <Link
-          href="/products"
-          className="hidden md:flex items-center gap-2 bg-[#003459] text-white px-4 py-2 rounded-4xl border hover:bg-white hover:text-[#003459] transition"
-        >
-          View all our sellers
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <p className="text-sm">
+              Proud to be part of
+              <span className="absolute top-870 text-[20px] font-bold text-[#003459] font-[Helvetica] ml-[6px]">
+                Pet Sellers
+              </span>
+            </p>
+          </div>
+          <Link
+            href="/products"
+            className="hidden md:flex items-center gap-2 bg-transparent text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-      </div>
-
-      {/* Image Strip */}
-      <div className="min-w-[200px]">
-        <div
-          className="flex gap-6"
-          style={{ height: "120px" }}
-        >
-          <img src="/ps1.png" alt="Seller 1" className="h-[100px] object-cover rounded-lg w-[130px]" />
-          <img src="/ps2.png" alt="Seller 2" className="h-[160px] object-cover rounded-lg w-[130px] relative -top-6" />
-          <img src="/ps3.png" alt="Seller 3" className="h-[100px] object-cover rounded-lg w-[230px]" />
-          <img src="/ps4.png" alt="Seller 4" className="h-[100px] object-cover rounded-lg w-[135px]" />
-          <img src="/ps5.png" alt="Seller 5" className="h-[130px] object-cover rounded-lg w-[130px]" />
-          <img src="/ps6.png" alt="Seller 6" className="h-[100px] object-cover rounded-lg w-[190px]" />
-          <img src="/ps7.png" alt="Seller 7" className="h-[100px] object-cover rounded-lg w-[162px]" />
+            View all our sellers
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
-      </div>
-    </section>
+        <div className="min-w-[200px]">
+          <div
+            className="flex gap-6"
+            style={{ height: "120px" }}
+          >
+            <img src="/ps1.png" alt="Seller 1" className="h-[100px] object-cover rounded-lg w-[130px]" />
+            <img src="/ps2.png" alt="Seller 2" className="h-[160px] object-cover rounded-lg w-[130px] relative -top-6" />
+            <img src="/ps3.png" alt="Seller 3" className="h-[100px] object-cover rounded-lg w-[230px]" />
+            <img src="/ps4.png" alt="Seller 4" className="h-[100px] object-cover rounded-lg w-[135px]" />
+            <img src="/ps5.png" alt="Seller 5" className="h-[130px] object-cover rounded-lg w-[130px]" />
+            <img src="/ps6.png" alt="Seller 6" className="h-[100px] object-cover rounded-lg w-[190px]" />
+            <img src="/ps7.png" alt="Seller 7" className="h-[100px] object-cover rounded-lg w-[162px]" />
+          </div>
+        </div>
+      </section>
 
     <section className="hidden md:block container md:left-5 md:mx-5 relative bg-[#FFB775] text-white py-16 rounded-4xl overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
         <div className="hidden md:flex relative flex-1 items-center justify-center md:pl-12">
-          {/* Background Shape (Desktop Only) */}
           <img
             src="/hero3-left.png"
             alt=""
@@ -420,34 +379,28 @@ export default function HomePage() {
             <p className="mb-6 text-[#003459] text-sm md:text-base max-w-md mx-auto md:mx-0">
               Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
             </p>
-
-            {/* Buttons */}
             <div className="flex flex-col md:flex-row gap-4 align-left w-full">
               <Link
                 href="/products"
-                className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border-2 hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
+                className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
               >
                 Explore Now
               </Link>
               <Link
                 href="/products"
-                className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border-2 hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
+                className="bg-transparent text-[#003459] px-7 py-3 rounded-4xl hover:bg-[#003459] border hover:text-white border-[#003459] transition w-full md:w-auto text-center"
               >
                 View Intro <FontAwesomeIcon icon={faPlay} />
               </Link>
             </div>
           </div>
         </div>
-
-        {/* ===== DESKTOP VIEW ===== */}
         <div className="hidden md:flex relative flex-1 justify-center md:justify-end mb-8 md:mb-0">
-          {/* Background Shape (Desktop Only) */}
           <img
             src="/hero3-right.png"
             alt=""
             className="absolute -top-25 -left-106 min-w-[1100px] z-0"
           />
-          {/* Main Image */}
           <img
             src="/hero3-img.png"
             alt=""
@@ -457,7 +410,7 @@ export default function HomePage() {
       </div>
     </section>
 
-    <section className="container md:mx-15 px-6 py-12">
+      <section className="container md:mx-15 px-6 py-12">
         <div className="flex items-center justify-between mb-6">
           <div>
             <p className="text-sm">You already know ?</p>
@@ -465,11 +418,9 @@ export default function HomePage() {
               Useful Pet Knowledge
             </h2>
           </div>
-
-          {/* Desktop Button */}
           <Link
             href="/products"
-            className="hidden md:flex items-center gap-2 bg-[#003459] text-white px-4 py-2 rounded-4xl border hover:bg-white hover:text-[#003459] transition"
+            className="hidden md:flex items-center gap-2 bg-transparent text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View more
             <svg
@@ -483,10 +434,6 @@ export default function HomePage() {
             </svg>
           </Link>
         </div>
-
-
-
-        {/* Pet Cards */}
         <div className="grid gap-6 sm:grid-cols-2 md:mt-10 lg:grid-cols-3">
           {knowledge.map((knowledge, idx) => (
             <div
@@ -506,16 +453,15 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-
         <div className="mt-6 flex justify-center md:hidden">
           <Link
             href="/products"
-            className="flex items-center gap-2 w-full text-center justify-center bg-[#003459] text-white px-4 py-2 rounded-4xl border hover:bg-white hover:text-[#003459] transition"
+            className="flex items-center gap-2 w-full text-center justify-center bg-white text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View more
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="relative h-4 w-4 top-[2px]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -524,8 +470,9 @@ export default function HomePage() {
             </svg>
           </Link>
         </div>
-
       </section>
+
+
   </div>
   );
 }
