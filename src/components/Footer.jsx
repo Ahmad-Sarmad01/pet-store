@@ -3,7 +3,6 @@ export default function Footer() {
     <footer className="bg-[#FCEED5] text-[#003459] pt-10">
       <div className="max-w-7xl mx-auto px-4">
         
-        {/* Newsletter */}
         <div className="bg-[#003459] rounded-xl p-6 flex flex-col gap-6 md:mt-8 md:w-250 md:ml-32 md:flex-row md:items-center md:justify-between">
           <h3 className="text-white font-bold text-lg leading-snug text-left">
             Register Now So You Don’t Miss <br />
@@ -23,18 +22,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Middle Row: Social + Nav */}
         <div className="hidden md:flex flex-col md:gap-100 gap-4 mt-8 md:flex-row md:items-center md:justify-around text-black">
-          
-          {/* Navigation */}
           <nav className="flex justify-center gap-6 text-sm font-medium order-2 md:order-1">
             <a href="#">Home</a>
             <a href="#">Category</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
           </nav>
-
-          {/* Social Icons */}
           <div className="flex gap-6 text-lg justify-center order-1 md:order-2">
             <a href="#"><i className="fab fa-facebook-f"></i></a>
             <a href="#"><i className="fab fa-twitter"></i></a>
@@ -50,7 +44,6 @@ export default function Footer() {
             <a href="#"><i className="fab fa-instagram"></i></a>
             <a href="#"><i className="fab fa-youtube"></i></a>
           </div>
-
           <nav className="flex justify-center gap-15 text-sm font-medium order-1">
             <a href="#">Home</a>
             <a href="#">Category</a>
@@ -59,10 +52,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-[#CCD1D2] mt-8 mb-8"></div>
 
-        {/* Bottom Row */}
         <div className="hidden md:flex flex-col items-center gap-4 md:flex-row md:items-center md:justify-between text-xs text-gray-600">
           <p className="text-center md:text-left md:mb-6">© 2025 Ahmad. All rights reserved.</p>
           <img src="/logo.png" alt="Monito Logo" className="h-8 md:h-6 md:mb-6" />

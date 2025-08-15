@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.slick-dots li button {
+  width: 1px;
+  height: 1px;
+}
+
+.slick-dots li.slick-active button {
+  margin-top: 5px;
+  width: 18px;      
+  height: 1px;
+  background-color: #003459; 
+  border-radius: 25%;
+}

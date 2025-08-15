@@ -3,15 +3,12 @@ import Link from "next/link";
 import pets from "@/data/pets";
 import product from "@/data/product";
 import knowledge from "@/data/knowledge";
-import Navbar from "@/components/Navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 export default function HomePage() {
   return (
     <div className="bg-gray-50">
-      <Navbar />
-
       <section className="relative bg-[#FCEED5] pt-24 md:pt-32 pb-16 overflow-hidden">
         <img
           src="/hero-rectangle-below-2.png"
@@ -32,13 +29,13 @@ export default function HomePage() {
               </p>
               <div className="flex flex-row gap-4 justify-start">
                 <Link
-                  href="/products"
+                  href="/category"
                   className="bg-transparent border border-[#003459] text-[#003459] px-5 py-3 rounded-4xl hover:bg-[#003459] hover:border-[#003459] hover:border hover:text-white transition"
                 >
                   View Intro <FontAwesomeIcon icon={faPlay} />
                 </Link>
                 <Link
-                  href="/products"
+                  href="/category"
                   className="bg-[#003459] text-white px-5 py-3 rounded-4xl hover:bg-transparent hover:border-[#003459] hover:border hover:text-[#003459] transition"
                 >
                   Explore Now
@@ -105,7 +102,7 @@ export default function HomePage() {
             </h2>
           </div>
           <Link
-            href="/products"
+            href="/category"
             className="hidden md:flex items-center gap-2 bg-trasparent text-[#003459] px-4 py-2 rounded-4xl border border-[#003459] hover:bg-[#003459] hover:text-white transition"
           >
             View more
@@ -154,7 +151,7 @@ export default function HomePage() {
         </div>
         <div className="mt-6 flex justify-center md:hidden">
           <Link
-            href="/products"
+            href="/category"
             className="flex items-center gap-2 w-full text-center justify-center bg-white text-[#003459] px-4 py-2 rounded-4xl border border-[#003459] hover:bg-[#003459] hover:text-white transition"
           >
             View more
@@ -204,13 +201,13 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center w-full">
                 <Link
-                  href="/products"
+                  href="/category"
                   className="bg-transparent text-[#003459] px-7 py-3 rounded-4xl hover:bg-[#003459] border hover:text-white border-[#003459] transition w-full md:w-auto text-center"
                 >
                   View Intro <FontAwesomeIcon icon={faPlay} />
                 </Link>
                 <Link
-                  href="/products"
+                  href="/category"
                   className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
                 >
                   Explore Now
@@ -236,13 +233,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-row gap-4 mb-8 w-full px-4 z-10">
               <Link
-                href="/products"
+                href="/category"
                 className="flex-1 bg-transparent hover:bg-[#003459] text-[#003459] hover:text-white border px-4 py-2 rounded-4xl  transition text-center"
               >
                 View More <FontAwesomeIcon icon={faPlay} />
               </Link>
               <Link
-                href="/products"
+                href="/category"
                 className="flex-1 bg-[#003459] hover:bg-[#003459] text-white hover:text-[#003459] border px-4 py-2 rounded-4xl transition text-center"
               >
                 Explore Now
@@ -273,7 +270,7 @@ export default function HomePage() {
             </h2>
           </div>
           <Link
-            href="/products"
+            href="/category"
             className="hidden md:flex items-center gap-2 bg-transparent text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View more
@@ -330,7 +327,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            href="/products"
+            href="/category"
             className="hidden md:flex items-center gap-2 bg-transparent text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View all our sellers
@@ -361,54 +358,54 @@ export default function HomePage() {
         </div>
       </section>
 
-    <section className="hidden md:block container md:left-5 md:mx-5 relative bg-[#FFB775] text-white py-16 rounded-4xl overflow-hidden">
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
-        <div className="hidden md:flex relative flex-1 items-center justify-center md:pl-12">
-          <img
-            src="/hero3-left.png"
-            alt=""
-            className="absolute inset-0 min-w-[840px] h-auto -top-32 -left-27 object-cover z-0"
-          />
-          <div className="relative z-10 text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-[#003459]">
-              One More Friend
-            </h2>
-            <h3 className="sm:text-xl md:text-3xl font-bold mb-4 text-[#003459]">
-              Thousands More Fun!
-            </h3>
-            <p className="mb-6 text-[#003459] text-sm md:text-base max-w-md mx-auto md:mx-0">
-              Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 align-left w-full">
-              <Link
-                href="/products"
-                className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
-              >
-                Explore Now
-              </Link>
-              <Link
-                href="/products"
-                className="bg-transparent text-[#003459] px-7 py-3 rounded-4xl hover:bg-[#003459] border hover:text-white border-[#003459] transition w-full md:w-auto text-center"
-              >
-                View Intro <FontAwesomeIcon icon={faPlay} />
-              </Link>
+      <section className="hidden md:block container md:left-5 md:mx-5 relative bg-[#FFB775] text-white py-16 rounded-4xl overflow-hidden">
+        <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
+          <div className="hidden md:flex relative flex-1 items-center justify-center md:pl-12">
+            <img
+              src="/hero3-left.png"
+              alt=""
+              className="absolute inset-0 min-w-[840px] h-auto -top-32 -left-27 object-cover z-0"
+            />
+            <div className="relative z-10 text-center md:text-left">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-[#003459]">
+                One More Friend
+              </h2>
+              <h3 className="sm:text-xl md:text-3xl font-bold mb-4 text-[#003459]">
+                Thousands More Fun!
+              </h3>
+              <p className="mb-6 text-[#003459] text-sm md:text-base max-w-md mx-auto md:mx-0">
+                Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
+              </p>
+              <div className="flex flex-col md:flex-row gap-4 align-left w-full">
+                <Link
+                  href="/category"
+                  className="bg-[#003459] text-white px-7 py-3 rounded-4xl hover:bg-transparent border hover:text-[#003459] border-[#003459] transition w-full md:w-auto text-center"
+                >
+                  Explore Now
+                </Link>
+                <Link
+                  href="/category"
+                  className="bg-transparent text-[#003459] px-7 py-3 rounded-4xl hover:bg-[#003459] border hover:text-white border-[#003459] transition w-full md:w-auto text-center"
+                >
+                  View Intro <FontAwesomeIcon icon={faPlay} />
+                </Link>
+              </div>
             </div>
           </div>
+          <div className="hidden md:flex relative flex-1 justify-center md:justify-end mb-8 md:mb-0">
+            <img
+              src="/hero3-right.png"
+              alt=""
+              className="absolute -top-25 -left-106 min-w-[1100px] z-0"
+            />
+            <img
+              src="/hero3-img.png"
+              alt=""
+              className="absolute z-10 w-[370px] h-[440px] -bottom-50"
+            />
+          </div>
         </div>
-        <div className="hidden md:flex relative flex-1 justify-center md:justify-end mb-8 md:mb-0">
-          <img
-            src="/hero3-right.png"
-            alt=""
-            className="absolute -top-25 -left-106 min-w-[1100px] z-0"
-          />
-          <img
-            src="/hero3-img.png"
-            alt=""
-            className="absolute z-10 w-[370px] h-[440px] -bottom-50"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
       <section className="container md:mx-15 px-6 py-12">
         <div className="flex items-center justify-between mb-6">
@@ -419,7 +416,7 @@ export default function HomePage() {
             </h2>
           </div>
           <Link
-            href="/products"
+            href="/category"
             className="hidden md:flex items-center gap-2 bg-transparent text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View more
@@ -455,7 +452,7 @@ export default function HomePage() {
         </div>
         <div className="mt-6 flex justify-center md:hidden">
           <Link
-            href="/products"
+            href="/category"
             className="flex items-center gap-2 w-full text-center justify-center bg-white text-[#003459] px-4 py-2 rounded-4xl border hover:bg-[#003459] hover:text-white transition"
           >
             View more
@@ -471,8 +468,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-
   </div>
   );
 }

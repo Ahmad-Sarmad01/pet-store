@@ -22,7 +22,6 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between md:mx-28 px-4 py-3">
-        {/* Mobile Left - Hamburger */}
         <button
           className="md:hidden text-2xl text-black"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -30,12 +29,10 @@ export default function Navbar() {
           {mobileOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <img src="/logo.png" alt="Pet Paradise Logo" className="h-8 w-auto" />
         </Link>
 
-        {/* Desktop Menu Links */}
         <div className="hidden md:flex items-center space-x-16 font-semibold ml-20 text-[#003459]">
           <Link href="/" className="hover:text-yellow-700">Home</Link>
           <Link href="/category" className="hover:text-yellow-700">Category</Link>
@@ -43,7 +40,6 @@ export default function Navbar() {
           <Link href="/contact" className="hover:text-yellow-700">Contact</Link>
         </div>
 
-        {/* Desktop Search Bar */}
         <div className="hidden md:flex items-center bg-white rounded-4xl px-3 py-1 ml-auto">
           <FiSearch className="text-black mr-2" />
           <input
@@ -53,7 +49,6 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Desktop Right Side */}
         <div className="hidden md:flex items-center space-x-4 ml-4 text-sm">
           <button
             className="
@@ -75,13 +70,11 @@ export default function Navbar() {
 
         </div>
 
-        {/* Mobile Right - Search icon */}
         <button className="md:hidden text-2xl text-black">
           <FiSearch />
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {mobileOpen && (
         <div className="absolute top-full left-0 w-full text-black bg-[#FCEED5] flex flex-col items-center py-4 md:hidden">
           <Link href="/" className="py-2" onClick={() => setMobileOpen(false)}>Home</Link>
