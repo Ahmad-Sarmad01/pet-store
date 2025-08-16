@@ -16,11 +16,6 @@ export default function ProductsPage() {
     dispatch(getProducts());
   }, [dispatch]);
 
-  if (status === "loading")
-    return <p className="text-center text-gray-500 mt-10">Loading...</p>;
-  if (status === "failed")
-    return <p className="text-center text-red-500 mt-10">Failed to load products.</p>;
-
   return (
     <div className="md:max-w-7xl min-w-[600px] mx-auto px-4 py-10 bg-white">
       <h1 className="text-md md:ml-4 font-bold mb-6 flex items-center gap-2 text-gray-500 mt-10">

@@ -1,12 +1,19 @@
 "use client";
+import { useEffect } from "react";
 import Link from "next/link";
 import pets from "@/data/pets";
 import product from "@/data/product";
+import { getProducts } from "@/redux/slices/productsSlice";
 import knowledge from "@/data/knowledge";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch } from "react-redux";
+import { setSelectedPet2 } from "../redux/slices/selectedPetSlice2";
 
 export default function HomePage() {
+
+  const dispatch = useDispatch();
+
   return (
     <div className="bg-gray-50">
       <section className="relative bg-[#FCEED5] pt-24 md:pt-32 pb-16 overflow-hidden">
@@ -117,37 +124,44 @@ export default function HomePage() {
             </svg>
           </Link>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {pets.slice(0, 8).map((dog) => (
-            <div
-              key={dog.id}
-              className="bg-white shadow rounded-lg border-4 border-white overflow-hidden hover:shadow-lg transition"
+            <Link 
+              key={dog.id} 
+              href="/cart2" 
+              onClick={() => dispatch(setSelectedPet2(dog))}
             >
-              <img
-                src={dog.image}
-                alt={dog.name}
-                className="w-full md:h-80 object-cover rounded-xl"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg text-[#00171F]">
-                  {dog.name}
-                </h3>
-                <p className="text-gray-500 text-sm mt-1">
-                  <span className="hidden md:inline">
-                    Gene: {dog.gender} &middot; Age: {dog.age}
-                  </span>
-                  <span className="block md:hidden">
-                    {dog.gender}
-                    <br />
-                    {dog.age}
-                  </span>
-                </p>
-                <p className="text-[#00171F] font-bold mt-2">
-                  {dog.price.toLocaleString("vi-VN")} VND
-                </p>
+              <div
+                className="bg-white shadow rounded-lg border-4 border-white overflow-hidden hover:shadow-lg transition"
+              >
+                <img
+                  src={dog.image}
+                  alt={dog.name}
+                  className="w-full md:h-80 object-cover rounded-xl"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold text-lg text-[#00171F]">
+                    {dog.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-1">
+                    <span className="hidden md:inline">
+                      Gene: {dog.gender} &middot; Age: {dog.age}
+                    </span>
+                    <span className="block md:hidden">
+                      {dog.gender}
+                      <br />
+                      {dog.age}
+                    </span>
+                  </p>
+                  <p className="text-[#00171F] font-bold mt-2">
+                    {dog.price.toLocaleString("vi-VN")} VND
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
+          
         </div>
         <div className="mt-6 flex justify-center md:hidden">
           <Link

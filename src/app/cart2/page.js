@@ -1,17 +1,15 @@
 "use client";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
-import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight, faMessage, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
 import Link from "next/link";
 import pets from "@/data/pets";
 import { setSelectedPet2 } from "../../redux/slices/selectedPetSlice2";
 import { useDispatch } from "react-redux";
 
-export default function CartPage() {
-  const pet = useSelector((state) => state.selectedPet.pet);
+export default function Cart2() {
+  const pet = useSelector((state) => state.selectedPet2.pet);
   if (!pet) return <p className="text-center mt-10">No pet selected.</p>;
 
   const dispatch = useDispatch();
@@ -42,6 +40,7 @@ export default function CartPage() {
     <div className="max-w-7xl mx-auto py-10 bg-white">
       <div className="px-6 md:px-10 mt-10 md:mt-15">
         <div className="flex flex-col md:flex-row gap-8">
+          {/* LEFT SIDE: Pet Image */}
           <div className="flex-1">
             <img
               src={pet.image}
@@ -70,6 +69,7 @@ export default function CartPage() {
             </div>
           </div>
 
+          {/* RIGHT SIDE: Pet Info */}
           <div className="flex-1 md:pt-4">
             <p className="text-sm text-gray-400 mb-2">
               Home <FontAwesomeIcon icon={faCaretRight} className="max-w-[6px] mx-2" /> Dog <FontAwesomeIcon icon={faCaretRight} className="max-w-[6px] mx-2" /> Large Dog <FontAwesomeIcon icon={faCaretRight} className="max-w-[6px] mx-2" /> <span className="text-sm text-gray-400">{pet.name}</span>
@@ -122,11 +122,11 @@ export default function CartPage() {
               <p>❤️ 100% health guarantee for pets </p>
               <p>🐾 100% guarantee of pet identification</p>
             </div>
-
           </div>
         </div>
       </div>
 
+      {/* Customer Slider */}
       <div className="mt-12 px-6 md:px-20">
         <h2 className="text-xl font-bold mb-6 text-[#003459]">Our lovely customer</h2>
         <Slider {...sliderSettings}>
@@ -142,6 +142,7 @@ export default function CartPage() {
         </Slider>
       </div>
 
+      {/* More Puppies Section */}
       <section className="px-6 md:px-10 md:mt-15">
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -158,33 +159,33 @@ export default function CartPage() {
               href="/cart2" 
               onClick={() => dispatch(setSelectedPet2(dog))}
             >
-              <div
-                className="bg-white shadow rounded-lg border-4 border-white overflow-hidden hover:shadow-lg transition"
-              >
-                <img
-                  src={dog.image}
-                  alt={dog.name}
-                  className="w-full md:h-80 object-cover rounded-xl"
-                />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg text-[#00171F]">
-                    {dog.name}
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">
-                    <span className="hidden md:inline">
-                      Gene: {dog.gender} &middot; Age: {dog.age}
-                    </span>
-                    <span className="block md:hidden">
-                      {dog.gender}
-                      <br />
-                      {dog.age}
-                    </span>
-                  </p>
-                  <p className="text-[#00171F] font-bold mt-2">
-                    {dog.price.toLocaleString("vi-VN")} VND
-                  </p>
-                </div>
+            <div
+              className="bg-white shadow rounded-lg border-4 border-white overflow-hidden hover:shadow-lg transition"
+            >
+              <img
+                src={dog.image}
+                alt={dog.name}
+                className="w-full md:h-80 object-cover rounded-xl"
+              />
+              <div className="p-4">
+                <h3 className="font-bold text-lg text-[#00171F]">
+                  {dog.name}
+                </h3>
+                <p className="text-gray-500 text-sm mt-1">
+                  <span className="hidden md:inline">
+                    Gene: {dog.gender} &middot; Age: {dog.age}
+                  </span>
+                  <span className="block md:hidden">
+                    {dog.gender}
+                    <br />
+                    {dog.age}
+                  </span>
+                </p>
+                <p className="text-[#00171F] font-bold mt-2">
+                  {dog.price.toLocaleString("vi-VN")} VND
+                </p>
               </div>
+            </div>
             </Link>
           ))}
         </div>
