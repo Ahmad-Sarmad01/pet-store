@@ -1,9 +1,7 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
 import pets from "@/data/pets";
 import product from "@/data/product";
-import { getProducts } from "@/redux/slices/productsSlice";
 import knowledge from "@/data/knowledge";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';

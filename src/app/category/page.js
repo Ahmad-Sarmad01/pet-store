@@ -4,17 +4,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "@/redux/slices/productsSlice";
 import ProductCard2 from "@/components/ProductCard2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight, faPlay } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 export default function ProductsPage() {
   const dispatch = useDispatch();
   const { items, status } = useSelector((state) => state.products);
 
+  const query = useSelector((state) => state.search.query);
+
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+
+  const filteredItems = items.filter((dog) =>
+    dog.name.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
     <div className="md:max-w-7xl min-w-[600px] mx-auto px-4 py-10 bg-white">
@@ -205,7 +210,7 @@ export default function ProductsPage() {
           <div className="flex items-center justify-between mt-6 ml-6 mr-6">
             <h1 className="text-[24px] font-bold text-[#003459]">
               Small Dog{" "}
-              <span className="text-[16px] font-normal text-[#667479] ml-1">52 puppies</span>
+              <span className="text-[16px] font-normal text-[#667479] ml-1">{filteredItems.length} puppies</span>
             </h1>
             <p className="flex items-center text-sm text-gray-400 hover:text-gray-700 cursor-pointer rounded-4xl border px-2 py-2 hover:border-gray-700 border-gray-300">
               Sort by: <span className="ml-1">Popular</span>
@@ -213,9 +218,15 @@ export default function ProductsPage() {
             </p>
           </div>
           <div className="rounded-lg p-10 grid gap-3 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-            {items.map((dog) => (
-              <ProductCard2 key={dog.id} product={dog} />
-            ))}
+            {filteredItems.length > 0 ? (
+              filteredItems.map((dog) => (
+                <ProductCard2 key={dog.id} product={dog} />
+              ))
+            ) : (
+              <p className="col-span-full text-center text-gray-500">
+                No pets found for "{query}"
+              </p>
+            )}
           </div>
           <div className="flex justify-center items-center mt-6 space-x-2 text-[#003459]">
             <button className="px-2 py-1 rounded hover:bg-gray-100">

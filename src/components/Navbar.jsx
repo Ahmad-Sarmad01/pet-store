@@ -2,18 +2,33 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiSearch, FiX, FiChevronDown } from "react-icons/fi";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
+import { setSearchQuery } from "@/redux/slices/searchSlice";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const query = useSelector((state) => state.search.query);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+const submitSearch = (e) => {
+  e.preventDefault();
+  setMobileOpen(false);
+
+  if (query.trim()) {
+    router.push(`/search?query=${encodeURIComponent(query)}`);
+  }
+};
+
 
   return (
     <nav
@@ -25,6 +40,7 @@ export default function Navbar() {
         <button
           className="md:hidden text-2xl text-black"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
           {mobileOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -40,14 +56,20 @@ export default function Navbar() {
           <Link href="/contact" className="hover:text-yellow-700">Contact</Link>
         </div>
 
-        <div className="hidden md:flex items-center bg-white rounded-4xl px-3 py-1 ml-auto">
+        {/* Desktop search */}
+        <form
+          onSubmit={submitSearch}
+          className="hidden md:flex items-center bg-white rounded-4xl px-3 py-1 ml-auto"
+        >
           <FiSearch className="text-black mr-2" />
           <input
             type="text"
             placeholder="Search something here!"
             className="outline-none bg-transparent text-md text-black"
+            value={query}
+            onChange={(e) => dispatch(setSearchQuery(e.target.value))}
           />
-        </div>
+        </form>
 
         <div className="hidden md:flex items-center space-x-4 ml-4 text-sm">
           <button
@@ -67,16 +89,33 @@ export default function Navbar() {
             </span>
             <FiChevronDown />
           </div>
-
         </div>
 
-        <button className="md:hidden text-2xl text-black">
+        {/* Mobile search icon (opens search input below) */}
+        <button
+          className="md:hidden text-2xl text-black"
+          aria-label="Search"
+          onClick={() => setMobileOpen((v) => !v)}
+        >
           <FiSearch />
         </button>
       </div>
 
+      {/* Mobile menu + search */}
       {mobileOpen && (
         <div className="absolute top-full left-0 w-full text-black bg-[#FCEED5] flex flex-col items-center py-4 md:hidden">
+          {/* Mobile search input */}
+          <form onSubmit={submitSearch} className="w-11/12 flex items-center bg-white rounded-3xl px-3 py-2 mb-3">
+            <FiSearch className="text-black mr-2" />
+            <input
+              type="text"
+              placeholder="Search something here!"
+              className="outline-none bg-transparent text-sm text-black flex-1"
+              value={query}
+              onChange={(e) => dispatch(setSearchQuery(e.target.value))}
+            />
+          </form>
+
           <Link href="/" className="py-2" onClick={() => setMobileOpen(false)}>Home</Link>
           <Link href="/category" className="py-2" onClick={() => setMobileOpen(false)}>Category</Link>
           <Link href="/about" className="py-2" onClick={() => setMobileOpen(false)}>About</Link>
